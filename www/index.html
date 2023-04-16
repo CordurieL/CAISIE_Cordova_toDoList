@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>To Do List</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google fonts-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body id="page-top">
+    <header class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
+      <div class="container px-4 px-lg-5">
+        <h1 class="navbar-brand fs-4 my-auto">To Do List</h1>
+        <button
+          id="header-add-button"
+          type="button"
+          class="btn btn-outline-light"
+          data-bs-toggle="modal"
+          data-bs-target="#addModal"
+        >
+          <i class="fas fa-plus"></i>
+          Ajouter une tâche
+        </button>
+      </div>
+    </header>
+    <div id="addModal" class="modal fade" index="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Ajouter une tâche</h2>
+          </div>
+          <div class="modal-body">
+            <form id="todo-form">
+              <div class="mt-3 mb-4">
+                <label for="todo-title-input">Tâche : </label>
+                <input
+                  type="text"
+                  id="todo-title-input"
+                  class="rounded-3 px-2"
+                  placeholder="Tâche à effectuer"
+                  required
+                />
+              </div>
+              <div class="mt-4 mb-3">
+                <label for="todo-date-input">Date limite : </label>
+                <input
+                  type="date"
+                  id="todo-date-input"
+                  class="rounded-3 px-2"
+                  required
+                />
+              </div>
+              <div class="btn-group w-100 mt-3 justify-content-around">
+                <input
+                  type="button"
+                  class="btn btn-secondary"
+                  value="Annuler"
+                  data-bs-dismiss="modal"
+                />
+                <input
+                  id="submit"
+                  type="submit"
+                  class="btn btn-primary"
+                  value="Ajouter"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <ul id="list" class="list-group"></ul>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="module" src="js/scripts.js"></script>
+  </body>
+</html>
